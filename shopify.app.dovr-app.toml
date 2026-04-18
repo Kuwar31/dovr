@@ -1,0 +1,23 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "b66bdbd291bc5b4896d3dea98c0fbf2f"
+name = "dovr-app"
+application_url = "https://dovr.onrender.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2026-07"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,read_orders,read_products,write_products"
+
+[auth]
+  redirect_urls = [
+    "https://dovr.onrender.com/auth/callback",
+    "https://dovr.onrender.com/auth/shopify/callback",
+    "https://dovr.onrender.com/api/auth/callback"
+  ]
